@@ -64,27 +64,27 @@ foreach ($getProjects as $project) {
 
 <p class="<?php echo $color ?> text-center"><?php echo $message ?></p>
 <form action="index.php#contact" method="post" class="col-11 mx-auto row">
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2 formone">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2" data-aos="zoom-in">
         <input class="effect-1 col-12 m-0 nobg" type="text" name="firstname" placeholder="Nom (Obligatoire)" required>
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2 formone">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2" data-aos="zoom-in">
         <input class="effect-1 col-12 m-0 nobg" type="text" name="lastname" placeholder="Prénom (Obligatoire)" required>
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2 formtwo">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2" data-aos="zoom-in">
         <input class="effect-1 col-12 m-0 nobg" type="tel" name="phone" placeholder="Téléphone">
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2 formtwo">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite mt-2" data-aos="zoom-in">
         <input class="effect-1 col-12 m-0 nobg" type="email" name="mail" placeholder="E-mail (Obligatoire)" required>
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 mx-auto m-0 p-0 colorwhite mt-2 formtree">
+    <div class="col-11 mx-auto m-0 p-0 colorwhite mt-2" data-aos="zoom-in">
         <textarea class="effect-1 col-12 m-0 nobg" name="message" placeholder="Sujet.. (Obligatoire)" cols="30" rows="5" required></textarea>
         <span class="focus-border"></span>
     </div>
-    <div class="col-5 mx-auto m-0 mb-5 mt-2 p-0 d-flex formfor">
+    <div class="col-5 mx-auto m-0 mb-5 mt-2 p-0 d-flex">
         <input class="my-auto mx-auto btn btn-primary" type="submit" name="send" value="Envoyer">
     </div>
 </form>
