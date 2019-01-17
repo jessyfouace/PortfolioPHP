@@ -17,7 +17,7 @@ include("template/header.php"); ?>
   <span id="realisation" class="h1 pl-1 pr-1">Mes Réalisations</span>
 </div>
 
-<div class="col-11 mx-auto row p-0 m-0">
+<div class="col-11 mx-auto row p-0 m-0" style="overflow-x: hidden;">
 
 <?php
 $calcul = 0;
