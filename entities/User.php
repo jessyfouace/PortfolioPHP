@@ -12,7 +12,7 @@ class User
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value) {
-            $method = 'set'.ucfirst($key);
+            $method = 'set' . ucfirst($key);
             if (method_exists($this, $method)) {
                 $this->$method($value);
             }
@@ -49,7 +49,7 @@ class User
      */
     public function setId($id)
     {
-        $id = (int) $id;
+        $id = (int)$id;
         $this->id = $id;
 
         return $this;

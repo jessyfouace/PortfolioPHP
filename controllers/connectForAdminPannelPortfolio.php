@@ -2,19 +2,19 @@
 
 function chargerClasse($classname)
 {
-    if (file_exists('../model/'. ucfirst($classname).'.php')) {
-        require '../model/'. ucfirst($classname).'.php';
-    } elseif (file_exists('../entities/'. ucfirst($classname).'.php')) {
-        require '../entities/'. ucfirst($classname).'.php';
-    } elseif (file_exists('../traits/'. ucfirst($classname).'.php')) {
-        require '../traits/'. ucfirst($classname).'.php';
+    if (file_exists('../model/' . ucfirst($classname) . '.php')) {
+        require '../model/' . ucfirst($classname) . '.php';
+    } elseif (file_exists('../entities/' . ucfirst($classname) . '.php')) {
+        require '../entities/' . ucfirst($classname) . '.php';
+    } elseif (file_exists('../traits/' . ucfirst($classname) . '.php')) {
+        require '../traits/' . ucfirst($classname) . '.php';
     } else {
-        require '../interface/'. ucfirst($classname).'.php';
+        require '../interface/' . ucfirst($classname) . '.php';
     }
 }
 spl_autoload_register('chargerClasse');
-
-$title = 'Jessy Fouace - Pannel Administrateur';
+session_start();
+$title = 'Jessy Fouace - Connection';
 
 $bdd = Database::BDD();
 $userManager = new UserManager($bdd);
@@ -36,6 +36,7 @@ if (!empty($_POST['connexion'])) {
                 if ($password) {
                     $color = "colorgreen font-weight-bold";
                     $message = "Connection en cours.";
+                    $_SESSION['name'] = $checkConnexion->getPseudo();
                     header('refresh: 1; url=admin.php');
                 } else {
                     $color = "colorred font-weight-bold";
@@ -47,5 +48,9 @@ if (!empty($_POST['connexion'])) {
             }
         }
     }
+}
+if (empty($_SESSION['name'])) {
+} else {
+    header('location: index.php');
 }
 require "../views/connectForAdminPannelPortfolioVue.php";

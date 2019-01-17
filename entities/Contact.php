@@ -15,7 +15,7 @@ class Contact
     public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value) {
-            $method = 'set'.ucfirst($key);
+            $method = 'set' . ucfirst($key);
             if (method_exists($this, $method)) {
                 $this->$method($value);
             }
@@ -77,7 +77,7 @@ class Contact
      */
     public function setId($id)
     {
-        $id = (int) $id;
+        $id = (int)$id;
         $this->id = $id;
 
         return $this;
@@ -114,7 +114,7 @@ class Contact
      */
     public function setPhone($phone)
     {
-        $phone = (int) $phone;
+        $phone = (int)$phone;
         $this->phone = $phone;
 
         return $this;

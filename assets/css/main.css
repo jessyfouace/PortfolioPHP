@@ -111,6 +111,10 @@ textarea {
     .heightpx {
         height: 150px !important;
     }
+
+    .sizephone {
+        font-size: 10px !important;
+    }
 }
 
 /* Extra small devices (phones, more than 501px) */
@@ -133,6 +137,10 @@ textarea {
     .heightpx {
         height: 250px !important;
     }
+
+    .sizephone {
+        font-size: 12px !important;
+    }
 }
 
 /* ##################################################################### */
@@ -153,6 +161,10 @@ textarea {
     .heightpx {
         height: 250px !important;
     }
+
+    .sizephone {
+        font-size: 14px !important;
+    }
 }
 
 /* ##################################################################### */
@@ -172,6 +184,10 @@ textarea {
 
     .heightpx {
         height: 300px !important;
+    }
+
+    .sizephone {
+        font-size: 16px !important;
     }
 }
 
@@ -449,22 +465,17 @@ p {
     opacity: 0.8;
 }
 
-/* ############ ABOUT ME ############ */
+/* ##################################################################### */
 
-/* ############ CONTACT ############ */
+/* #############################    ABOUT   ############################ */
 
-/* input {
-    border: none;
-    border-bottom: 1px solid transparent;
-    color: black;
-}
+/* ##################################################################### */
 
-input:focus {
-    border-bottom: 5px solid blue;
-    transform: scaleY(0.999);
-    transform-origin: 0 50%;
-    transition: 0.5s ease-out;
-} */
+/* ##################################################################### */
+
+/* #############################   CONTACT  ############################ */
+
+/* ##################################################################### */
 
 .nobg {
     background-color: inherit;
@@ -509,6 +520,67 @@ input:focus {
 
 .colorred {
     color: red;
+}
+
+.colorblack {
+    color: #252d31;
+}
+
+
+/* ##################################################################### */
+
+/* #############################    ADMIN   ############################ */
+
+/* ##################################################################### */
+
+
+.sidebar {
+    background-color: #26262b;
+    transition: all 0.5s ease-in-out;
+}
+
+.bg-defoult {
+    background-color: #252d31;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar li a,
+.sidebar li a.collapsed.active {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    border-left: 0px solid #dedede;
+    text-decoration: none
+}
+
+.sidebar li a.active {
+    background-color: #252d31;
+    border-left: 5px solid #dedede;
+    transition: all 0.5s ease-in-out
+}
+
+.sidebar li a:hover {
+    background-color: #d6d6d6 !important;
+    color: #590081;
+}
+
+.overflow {
+    overflow-y: hidden;
+}
+
+.colorandsize {
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+img[src='https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png'] {
+    display: none !important;
 }
 
 /* ==========================================================================

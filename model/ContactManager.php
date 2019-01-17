@@ -22,6 +22,28 @@ class ContactManager
         return $arrayOfMessages;
     }
 
+    public function getMessageById(Contact $message)
+    {
+        $arrayOfMessages;
+        $query = $this->getBdd()->prepare('SELECT * FROM contact WHERE id = :id');
+        $query->bindValue('id', $message->getId(), PDO::PARAM_INT);
+        $query->execute();
+        $messages = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($messages as $message) {
+            $arrayOfMessages[] = new Contact($message);
+        }
+
+        return $arrayOfMessages;
+    }
+
+    public function removeMessage(Contact $message)
+    {
+        $query = $this->getBdd()->prepare('DELETE FROM contact WHERE id = :id');
+        $query->bindValue('id', $message->getId(), PDO::PARAM_INT);
+        $query->execute();
+    }
+
     public function addMessage(Contact $message)
     {
         $query = $this->getBdd()->prepare('INSERT INTO contact(firstname, lastname, phone, email, message) VALUES(:firstname, :lastname, :phone, :email, :message)');
