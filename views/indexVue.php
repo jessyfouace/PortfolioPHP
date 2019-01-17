@@ -19,9 +19,16 @@ include("template/header.php"); ?>
 
 <div class="col-11 mx-auto row p-0 m-0">
 
-<?php foreach ($getProjects as $project) {
-    ?>
-    <div class="col-12 col-md-7 mx-auto view overlay zoom mt-5 heightpx timerprojet">
+<?php
+$calcul = 0;
+foreach ($getProjects as $project) {
+    $calcul++; ?>
+    
+<div class="col-12 col-md-7 mx-auto view overlay zoom mt-5 heightpx" <?php if ($calcul&1) {
+        ?> data-aos="fade-left" <?php
+    } else {
+        ?> data-aos="fade-right" <?php
+    } ?>data-aos-duration="1500">
     <div class="hovereffect">
         <img style="width: 100%; height: 110%" class="img-responsive" src="<?php echo $project->getImage(); ?>" alt="">
             <div class="overlay">

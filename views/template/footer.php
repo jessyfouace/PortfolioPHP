@@ -19,6 +19,9 @@
       ScrollReveal().reveal('.formtree', {delay: 700});
       ScrollReveal().reveal('.formfor', {delay: 900});
   </script>
+  <script>
+  AOS.init();
+</script>
 </body>
 
 </html>
