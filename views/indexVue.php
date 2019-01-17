@@ -28,7 +28,7 @@ foreach ($getProjects as $project) {
         ?> data-aos="fade-left" <?php
     } else {
         ?> data-aos="fade-right" <?php
-    } ?>data-aos-duration="1500">
+    } ?>data-aos-duration="1000">
     <div class="hovereffect">
         <img style="width: 100%; height: 110%" class="img-responsive" src="<?php echo $project->getImage(); ?>" alt="">
             <div class="overlay">
