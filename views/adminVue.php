@@ -6,7 +6,7 @@ include("template/header.php"); ?>
           <div class="sidebar left">
             <div>
               <div class="row m-0 p-2">
-                <p>Bonjour <?php echo $_SESSION['name']; ?></p>
+                <p>Bonjour <?php echo $_COOKIE['pseudo']; ?></p>
               </div>
             </div>
             <ul class="list-sidebar bg-defoult">

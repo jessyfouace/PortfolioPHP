@@ -34,7 +34,7 @@
                 <li class="nav-item"><a href="index.php#realisation" class="nav-link">Réalisation</a></li>
                 <li class="nav-item"><a href="index.php#about" class="nav-link">A Propos</a></li>
                 <li class="nav-item"><a href="index.php#contact" class="nav-link">Contact</a></li>
-                <?php if (!empty($_SESSION['name'])) {
+                <?php if (!empty($_COOKIE['pseudo'])) {
     ?>
                 <li class="dropdown order-1">
                     <li class="nav-item"><a class="nav-link" href="admin.php"><span> Pannel Admin</span></a></li>

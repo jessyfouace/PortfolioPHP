@@ -18,7 +18,7 @@ session_start();
 
 $title = 'Jessy Fouace - Pannel Administrateur';
 
-if (!empty($_SESSION['name'])) {
+if (!empty($_COOKIE['pseudo'])) {
     $bdd = Database::BDD();
     if (isset($_GET['contact'])) {
         if ($_GET['contact'] == 'true') {

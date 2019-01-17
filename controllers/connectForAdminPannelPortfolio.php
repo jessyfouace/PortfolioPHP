@@ -36,7 +36,8 @@ if (!empty($_POST['connexion'])) {
                 if ($password) {
                     $color = "colorgreen font-weight-bold";
                     $message = "Connection en cours.";
-                    $_SESSION['name'] = $checkConnexion->getPseudo();
+                    setCookie('pseudo', $checkConnexion->getPseudo(), (time()+60*60*24*365));
+                    setCookie('motdepassecrypte', $_POST['password'], (time()+60*60*24*365));
                     header('refresh: 1; url=admin.php');
                 } else {
                     $color = "colorred font-weight-bold";
@@ -49,7 +50,7 @@ if (!empty($_POST['connexion'])) {
         }
     }
 }
-if (empty($_SESSION['name'])) {
+if (!isset($_COOKIE['pseudo'])) {
 } else {
     header('location: index.php');
 }
