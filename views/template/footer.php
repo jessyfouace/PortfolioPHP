@@ -14,10 +14,10 @@
   <script>
       ScrollReveal({ reset: true });
       ScrollReveal().reveal('.timerprojet', {delay: 200});
-      ScrollReveal().reveal('.formone');
+      ScrollReveal().reveal('.formone', {delay: 300});
       ScrollReveal().reveal('.formtwo', {delay: 500});
-      ScrollReveal().reveal('.formtree', {delay: 900});
-      ScrollReveal().reveal('.formfor', {delay: 1300});
+      ScrollReveal().reveal('.formtree', {delay: 700});
+      ScrollReveal().reveal('.formfor', {delay: 900});
   </script>
 </body>
 
