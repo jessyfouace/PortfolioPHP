@@ -2,7 +2,7 @@
 include("template/header.php"); ?>
 <p class="colorred pt-3 font-weight-bold text-center sizeforphone"><?= $message ?></p>
 <div class="mt-5 pt-3">
-    <div class="row col-12 col-md-11 m-0 p-0 formone">
+    <div class="row col-12 col-md-11 m-0 p-0">
         <div class="col-12 col-md-6 m-0 p-0 text-center">
             <img style="width: 95%; height: 100%" src="<?php echo $getProjects->getImage(); ?>" alt="">
         </div>
