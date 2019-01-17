@@ -11,6 +11,13 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script>
+  ScrollReveal({ reset: true });
+  ScrollReveal().reveal('.formone', { delay: 500 });
+  ScrollReveal().reveal('.formtwo', { delay: 700 });
+  ScrollReveal().reveal('.formtree', { delay: 900 });
+  ScrollReveal().reveal('.formfor', { delay: 1100 });
+  </script>
 </body>
 
 </html>

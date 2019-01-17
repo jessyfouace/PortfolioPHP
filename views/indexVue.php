@@ -21,7 +21,7 @@
 
 <?php foreach ($getProjects as $project) {
       ?>
-    <div class="col-12 col-md-7 mx-auto view overlay zoom mt-5 heightpx">
+    <div class="col-12 col-md-7 mx-auto view overlay zoom mt-5 heightpx formone">
     <div class="hovereffect">
         <img style="width: 100%; height: 110%" class="img-responsive" src="<?php echo $project->getImage(); ?>" alt="">
             <div class="overlay">
@@ -57,27 +57,27 @@
 
 <p class="<?php echo $color ?> text-center"><?php echo $message ?></p>
 <form action="index.php#contact" method="post" class="col-11 mx-auto row">
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite formone">
         <input class="effect-1 col-12 m-0 nobg" type="text" name="firstname" placeholder="Nom">
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite formone">
         <input class="effect-1 col-12 m-0 nobg" type="text" name="lastname" placeholder="Prénom">
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite formtwo">
         <input class="effect-1 col-12 m-0 nobg" type="tel" name="phone" placeholder="Téléphone">
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite">
+    <div class="col-11 col-md-5 mx-auto m-0 p-0 colorwhite formtwo">
         <input class="effect-1 col-12 m-0 nobg" type="email" name="mail" placeholder="E-mail">
         <span class="focus-border"></span>
     </div>
-    <div class="col-11 mx-auto m-0 p-0 colorwhite">
+    <div class="col-11 mx-auto m-0 p-0 colorwhite formtree">
         <textarea class="effect-1 col-12 m-0 nobg" name="message" placeholder="Sujet.." cols="30" rows="5"></textarea>
         <span class="focus-border"></span>
     </div>
-    <div class="col-5 mx-auto m-0 mb-5 mt-2 p-0 d-flex">
+    <div class="col-5 mx-auto m-0 mb-5 mt-2 p-0 d-flex formfor">
         <input class="my-auto mx-auto btn btn-primary" type="submit" name="send" value="Envoyer">
     </div>
 </form>

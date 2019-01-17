@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
   <!-- Place favicon.ico in the root directory -->
-
+  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/normalize.css">
   <link rel="stylesheet" href="../assets/css/main.css">
