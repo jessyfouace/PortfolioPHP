@@ -2,7 +2,10 @@
 include("template/header.php"); ?>
 
 <div id="loader" style="width: 100%; height: 100vh; background-color: #26262b;display: flex; position: fixed; z-index: 5000000;">
-    <i class="mx-auto fa-10x fab fa-connectdevelop my-auto"></i>
+    <div class="mx-auto my-auto text-center">
+        <i class="mx-auto fa-10x fab fa-connectdevelop my-auto"></i>
+        <p style="font-size: 50px;">Jessy Fouace</p>
+    </div>
 </div>
 
 <div class="height100vh col-12 m-0 p-0 d-flex">
