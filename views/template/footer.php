@@ -12,8 +12,24 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
   <script>
-  AOS.init();
-</script>
+    AOS.init();
+  </script>
+  <script>
+   let loader = document.getElementById('loader');
+   let interval = setInterval(functionLoader, 1500);
+
+   function functionLoader() {
+      let animation = document.createAttribute('data-aos')
+      animation.value = "fade-down";
+      loader.setAttributeNode(animation);
+      let intervalVue = setInterval(functionDissapear, 200);
+      function functionDissapear() {
+        loader.classList.add('d-none');
+        clearInterval(intervalVue);
+      }
+      clearInterval(interval);
+   }
+  </script>
 </body>
 
 </html>

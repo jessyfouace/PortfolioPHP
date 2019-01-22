@@ -1,12 +1,16 @@
 <?php
 include("template/header.php"); ?>
 
+<div id="loader" style="width: 100%; height: 100vh; background-color: #26262b;display: flex; position: fixed; z-index: 5000000;">
+    <i class="mx-auto fa-10x fab fa-connectdevelop my-auto"></i>
+</div>
+
 <div class="height100vh col-12 m-0 p-0 d-flex">
   <div class="height100vh col-12 m-0 p-0 d-flex row">
   <div class="height50vh my-auto bgvague text-center d-flex">
   </div>
   <div style="z-index: 10" class="height100vh col-12 text-center position-absolute d-flex">
-    <img class="imageresponsive my-auto mx-auto" src="../assets/img/noobspacetest.png" alt="test">
+    <img id="imageNs" data-aos="zoom-in" class="imageresponsive my-auto mx-auto" src="../assets/img/noobspacetest.png" alt="test">
   </div>
   <div style="width: 100%; height: 50vh;" class="height50vh my-auto secondbgvague text-center d-flex">
   </div>
