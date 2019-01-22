@@ -4,7 +4,7 @@ include("template/header.php"); ?>
 <div id="loader" style="width: 100%; height: 100vh; background-color: #26262b;display: flex; position: fixed; z-index: 5000000;">
     <div class="mx-auto my-auto text-center">
         <i class="mx-auto fa-10x fab fa-connectdevelop my-auto"></i>
-        <p style="font-size: 50px;">Jessy Fouace</p>
+        <p style="font-size: 50px;"><span class="firstanim">J</span><span class="secondanim">e</span><span class="thirdanim">s</span><span class="foranim">s</span><span class="fiveanim">y </span><span class="fiveanim">F</span><span class="fiveanim">o</span><span class="foranim">u</span><span class="thirdanim">a</span><span class="secondanim">c</span><span class="firstanim">e</span></p>
     </div>
 </div>
 

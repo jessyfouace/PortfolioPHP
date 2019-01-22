@@ -30,6 +30,13 @@
       clearInterval(interval);
    }
   </script>
+  <script>
+    ScrollReveal().reveal('.firstanim', { duration: 300 });
+    ScrollReveal().reveal('.secondanim', { duration: 600 });
+    ScrollReveal().reveal('.thirdanim', { duration: 900 });
+    ScrollReveal().reveal('.foranim', { duration: 1200 });
+    ScrollReveal().reveal('.fiveanim', { duration: 1400 });
+  </script>
 </body>
 
 </html>
