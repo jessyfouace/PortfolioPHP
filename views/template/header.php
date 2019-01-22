@@ -14,8 +14,10 @@
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
   <!-- Place favicon.ico in the root directory -->
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="../assets/aos-master/dist/aos.css">
+  <script src="../assets/aos-master/dist/aos.js"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
   
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/normalize.css">
