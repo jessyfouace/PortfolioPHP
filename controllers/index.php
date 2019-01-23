@@ -47,13 +47,16 @@ if(!isset($_SESSION['pseudo'])){
                 if ($password) {
                     $_SESSION['pseudo'] = $_COOKIE['pseudo'];
                     $_SESSION['password'] = $_COOKIE['motdepassecrypte'];
+                    header('location: ' . $_SERVER['REQUEST_URI']);
                 } else {
                     setcookie("pseudo", "", time() - 3600);
                     setcookie("motdepassecrypte", "", time() - 3600);
+                    header('location: ' . $_SERVER['REQUEST_URI']);
                 }
             } else {
                 setcookie("pseudo", "", time() - 3600);
                 setcookie("motdepassecrypte", "", time() - 3600);
+                header('location: ' . $_SERVER['REQUEST_URI']);
             }
         }
     }
