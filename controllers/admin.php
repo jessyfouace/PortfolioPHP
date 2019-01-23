@@ -18,7 +18,41 @@ session_start();
 
 $title = 'Jessy Fouace - Pannel Administrateur';
 
-if (!empty($_COOKIE['pseudo'])) {
+if (isset($_POST['acceptcookies'])) {
+    setCookie('acceptation', 'Accepter', (time() + 60 * 60 * 24 * 365));
+    header('location: ' . $_SERVER['REQUEST_URI']);
+} elseif (isset($_POST['refusecookies'])) {
+    $_SESSION['nocookies'] = 'true';
+    header('location: ' . $_SERVER['REQUEST_URI']);
+}
+
+if (!isset($_SESSION['pseudo'])) {
+    if (isset($_COOKIE['pseudo'])) {
+        if (isset($_COOKIE['motdepassecrypte'])) {
+            $pseudo = htmlspecialchars($_COOKIE['pseudo']);
+            $user = new User([
+                'pseudo' => $pseudo
+            ]);
+            $password = htmlspecialchars($_COOKIE['motdepassecrypte']);
+            $checkConnexion = $userManager->getUsers($user);
+            if ($checkConnexion) {
+                $password = password_verify($password, $checkConnexion->getPassword());
+                if ($password) {
+                    $_SESSION['pseudo'] = $_COOKIE['pseudo'];
+                    $_SESSION['password'] = $_COOKIE['motdepassecrypte'];
+                } else {
+                    setcookie("pseudo", "", time() - 3600);
+                    setcookie("motdepassecrypte", "", time() - 3600);
+                }
+            } else {
+                setcookie("pseudo", "", time() - 3600);
+                setcookie("motdepassecrypte", "", time() - 3600);
+            }
+        }
+    }
+}
+
+if (!empty($_SESSION['pseudo'])) {
     $bdd = Database::BDD();
     if (isset($_GET['contact'])) {
         if ($_GET['contact'] == 'true') {

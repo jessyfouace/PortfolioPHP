@@ -1,12 +1,31 @@
 <?php
 include("template/header.php"); ?>
+
+<?php 
+if (!isset($_SESSION['nocookies'])) {
+  if (!isset($_COOKIE['acceptation'])) { ?>
+<div style="border-radius: 0px; position: fixed; bottom: -20px; z-index: 49999; width: 100%;" class="alert alert-secondary">
+    <div class="row col-12 m-0 p-0">
+        <p class="col-10" style="color: black;">Ce site utilise des cookies de connection ainsi qu'un cookie pour ce souvenir de votre choix dans l'acceptation. Si vous validez ce message les cookies seront accepté si vous refusez les cookies seront non autoriser.</p>
+        <form action="<?= $_SERVER['REQUEST_URI'] ?>" method="post">
+            <input type="submit" name="acceptcookies" class="btn btn-primary" value="J'accepte">
+            <input type="submit" name="refusecookies" class="btn btn-danger" value="Je refuse">
+        </form>
+    </div>
+</div>
+<?php 
+} else {
+  $_SESSION['nocookies'] = 'true';
+}
+} ?>
+
     <div class="col-12 row m-0 p-0 pt-2 mt-5">
       <div class="maincol-12 col-md-3 p-0 m-0">
         <aside>
           <div class="sidebar left">
             <div>
               <div class="row m-0 p-2">
-                <p>Bonjour <?php echo $_COOKIE['pseudo']; ?></p>
+                <p>Bonjour <?php echo $_SESSION['pseudo']; ?></p>
               </div>
             </div>
             <ul class="list-sidebar bg-defoult">
